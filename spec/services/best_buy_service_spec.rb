@@ -15,7 +15,10 @@ RSpec.describe BestBuyService do
   describe "#search_by_store_id" do
     it "returns a single store by store id" do
       VCR.use_cassette("#search_by_store_id") do
-        
+        response = BestBuyService.new.search_by_store_id("2740")
+
+        expect(response["total"]).to eq(1)
+        expect(response["stores"].count).to eq(1)
       end
     end
   end

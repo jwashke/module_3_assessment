@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bestbuy.com/v1/stores(storeId=2740)?apiKey=nysued5unnmfhft4bp5u6779&format=json&show=long_name,storeType,address,city,region,postalCode,hoursAmPm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Jun 2016 17:55:00 GMT
+      Server:
+      - thin 1.6.1 codename Death Proof
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-114.mashery.com
+      Content-Length:
+      - '673'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "from": 1,
+          "to": 1,
+          "total": 1,
+          "currentPage": 1,
+          "totalPages": 1,
+          "queryTime": "0.003",
+          "totalTime": "0.005",
+          "partial": false,
+          "canonicalUrl": "/v1/stores(storeId=2740)?show=long_name,storeType,address,city,region,postalCode,hoursAmPm&format=json&apiKey=nysued5unnmfhft4bp5u6779",
+          "stores": [
+            {
+              "longName": "Best Buy Mobile - Cherry Creek Shopping Center",
+              "storeType": "Mobile",
+              "address": "3000 East First Ave",
+              "city": "Denver",
+              "region": "CO",
+              "postalCode": "80206",
+              "hoursAmPm": "Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: 11am-6pm"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 14 Jun 2016 17:55:00 GMT
+recorded_with: VCR 3.0.3
