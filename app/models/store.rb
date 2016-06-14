@@ -1,8 +1,13 @@
 class Store
-  attr_reader :long_name, :city, :distance, :phone_number, :store_type
+  attr_reader :name, :city, :distance, :phone, :store_type, :id
 
   def initialize(store)
-    byebug
+    @id = store["storeId"]
+    @name = store["longName"]
+    @phone = store["phone"]
+    @store_type = store["storeType"]
+    @city = store["city"]
+    @distance = store["distance"]
   end
 
   def self.get_stores(zip_code, distance = 25)
