@@ -5,7 +5,7 @@ class Store
     byebug
   end
 
-  def self.get_store(zip_code, distance = 25)
+  def self.get_stores(zip_code, distance = 25)
     response = BestBuyService.new.search_by_zip(zip_code, distance)
     total = response["total"]
     stores = response["stores"].map do |store|
