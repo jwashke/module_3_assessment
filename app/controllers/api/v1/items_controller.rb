@@ -12,4 +12,14 @@ class Api::V1::ItemsController < Api::V1::ApiController
     @item.destroy
     respond_with(@item, status: 204)
   end
+
+  def create
+    @item = Item.new(item_params)
+    @item.save
+    respond_with(@item, status: 201)
+  end
+
+  def item_params
+    params.require(:item).permit(:name, :description, :image_url)
+  end
 end
