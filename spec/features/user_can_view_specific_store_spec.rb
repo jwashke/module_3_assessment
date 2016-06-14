@@ -18,11 +18,16 @@ RSpec.feature "User can view a single best buy store by id" do
 
     expect(current_path).to eq("/stores/2740")
     within(".store-info") do
-      save_and_open_page
       expect(page).to have_content("Best Buy Mobile - Cherry Creek Shopping Center")
       expect(page).to have_content("3000 East First Ave")
       expect(page).to have_content("Denver, CO 80206")
       expect(page).to have_content("Mon: 10am-9pm")
+      expect(page).to have_content("Tue: 10am-9pm")
+      expect(page).to have_content("Wed: 10am-9pm")
+      expect(page).to have_content("Thurs: 10am-9pm")
+      expect(page).to have_content("Fri: 10am-9pm")
+      expect(page).to have_content("Sat: 10am-9pm")
+      expect(page).to have_content("Sun: 11am-6pm")
     end
   end
 end

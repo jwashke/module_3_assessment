@@ -4,8 +4,8 @@
 <p><%= @store.address %></p>
 <p><%= @store.city %>, <%= @store.state %> <%= @store.zip %></p>
 <ul>
-  <% @store.hours do |day| %>
-    <li><% day %></li>
+  <% @store.hours.each do |day| %>
+    <li><%= day %></li>
   <% end %>
 </ul>
 </div>
