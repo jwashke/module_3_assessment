@@ -2,7 +2,7 @@ class BestBuyService
   def initialize
     @conn = Faraday.new(url: "https://api.bestbuy.com/v1")
   end
-#https://api.bestbuy.com/v1/stores(storeId=2740)?format=json&show=long_name,storeType,address,city,region,postalCode,hoursAmPm&apiKey=nysued5unnmfhft4bp5u6779
+  
   def search_by_zip(zip_code, distance)
     parse_json(search_nearest(zip_code, distance))
   end
