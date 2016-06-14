@@ -24,7 +24,7 @@ class Store
 
   def self.get_store(store_id)
     response = BestBuyService.new.search_by_store_id(store_id)
-    store = response["stores"]
+    store = response["stores"].first
     Store.new(store)
   end
 
