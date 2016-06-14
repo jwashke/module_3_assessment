@@ -14,7 +14,7 @@ class BestBuyService
   def stores_by_id(store_id)
     @conn.get "stores(storeId=#{store_id})", {
       format: "json",
-      show: "longName,storeType,address,city,region,postalCode,hoursAmPm",
+      show: "long_name,storeType,address,city,region,postalCode,hoursAmPm",
       apiKey: ENV['BEST_BUY_API_KEY']
     }
   end

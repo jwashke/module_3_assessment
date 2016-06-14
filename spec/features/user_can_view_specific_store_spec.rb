@@ -5,8 +5,8 @@
 
 require "rails_helper"
 
-RSpec.feature "User can view bestbuy stores by zip" do
-  it "displays the 15 closest stores and and their information" do
+RSpec.feature "User can view a single best buy store by id" do
+  it "displays the store info and hours" do
     visit root_path
     fill_in :search, with: "80202"
     click_button "Search"
@@ -18,6 +18,7 @@ RSpec.feature "User can view bestbuy stores by zip" do
 
     expect(current_path).to eq("/stores/2740")
     within(".store-info") do
+      save_and_open_page
       expect(page).to have_content("Best Buy Mobile - Cherry Creek Shopping Center")
       expect(page).to have_content("3000 East First Ave")
       expect(page).to have_content("Denver, CO 80206")

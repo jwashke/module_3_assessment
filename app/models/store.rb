@@ -1,11 +1,12 @@
 class Store
-  attr_reader :name, :city, :distance, :phone, :store_type, :id
+  attr_reader :name, :city, :distance, :phone, :store_type, :id, :hours, :address, :state, :zip
 
   def initialize(store)
     @id = store["storeId"]
     @name = store["longName"]
     @phone = store["phone"]
     @store_type = store["storeType"]
+    @address = store["address"]
     @city = store["city"]
     @state = store["region"]
     @zip = store["postalCode"]
@@ -31,6 +32,6 @@ class Store
   private
 
   def format_store_hours(hours_string)
-    hours_string.split("; ")
+    hours_string.split("\; ")
   end
 end

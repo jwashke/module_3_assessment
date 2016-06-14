@@ -1,0 +1,11 @@
+<div class="store-info">
+<h1><%= @store.name %></h1>
+<h3><%= @store.store_type %></h3>
+<p><%= @store.address %></p>
+<p><%= @store.city %>, <%= @store.state %> <%= @store.zip %></p>
+<ul>
+  <% @store.hours do |day| %>
+    <li><% day %></li>
+  <% end %>
+</ul>
+</div>
