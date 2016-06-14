@@ -1,0 +1,172 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=nysued5unnmfhft4bp5u6779&format=json&pageSize=15&show=storeId,longName,phone,city,distance,storeType
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Jun 2016 17:52:48 GMT
+      Server:
+      - thin 1.6.1 codename Death Proof
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-123.mashery.com
+      Content-Length:
+      - '3263'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "from": 1,
+          "to": 15,
+          "total": 17,
+          "currentPage": 1,
+          "totalPages": 2,
+          "queryTime": "0.190",
+          "totalTime": "0.203",
+          "partial": false,
+          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=storeId,longName,phone,city,distance,storeType&format=json&apiKey=nysued5unnmfhft4bp5u6779",
+          "stores": [
+            {
+              "storeId": 2740,
+              "longName": "Best Buy Mobile - Cherry Creek Shopping Center",
+              "phone": "303-270-9189",
+              "city": "Denver",
+              "distance": 3.25,
+              "storeType": "Mobile"
+            },
+            {
+              "storeId": 1224,
+              "longName": "Best Buy - Belmar",
+              "phone": "303-742-8039",
+              "city": "Lakewood",
+              "distance": 5.28,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 211,
+              "longName": "Best Buy - Colorado Blvd",
+              "phone": "303-758-5805",
+              "city": "Denver",
+              "distance": 5.61,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 382,
+              "longName": "Best Buy - Denver West",
+              "phone": "303-273-5617",
+              "city": "Lakewood",
+              "distance": 8.38,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 209,
+              "longName": "Best Buy - Westminster",
+              "phone": "303-426-4434",
+              "city": "Westminster",
+              "distance": 8.54,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 2737,
+              "longName": "Best Buy Mobile - Colorado Mills",
+              "phone": "303-278-0601",
+              "city": "Lakewood",
+              "distance": 8.59,
+              "storeType": "Mobile"
+            },
+            {
+              "storeId": 1416,
+              "longName": "Best Buy - Northglenn",
+              "phone": "303-252-8677",
+              "city": "Denver",
+              "distance": 9.12,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 2730,
+              "longName": "Best Buy Mobile - Town Center at Aurora",
+              "phone": "303-326-0848",
+              "city": "Aurora",
+              "distance": 9.66,
+              "storeType": "Mobile"
+            },
+            {
+              "storeId": 217,
+              "longName": "Best Buy - Aurora",
+              "phone": "303-338-5797",
+              "city": "Aurora",
+              "distance": 9.83,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 210,
+              "longName": "Best Buy - Littleton",
+              "phone": "303-932-7830",
+              "city": "Littleton",
+              "distance": 10.45,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 1171,
+              "longName": "Best Buy - Southglenn",
+              "phone": "303-797-3246",
+              "city": "Centennial",
+              "distance": 11.0,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 1134,
+              "longName": "Best Buy - I70 & Tower Rd",
+              "phone": "303-373-9284",
+              "city": "Aurora",
+              "distance": 11.73,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 2953,
+              "longName": "Best Buy Mobile - Flatiron Crossing Mall ",
+              "phone": "303-466-8624",
+              "city": "Broomfield",
+              "distance": 14.44,
+              "storeType": "Mobile"
+            },
+            {
+              "storeId": 164,
+              "longName": "Best Buy - S.E. Denver",
+              "phone": "303-649-9474",
+              "city": "Lone Tree",
+              "distance": 14.98,
+              "storeType": "BigBox"
+            },
+            {
+              "storeId": 694,
+              "longName": "Best Buy - S.E. Aurora",
+              "phone": "303-693-0166",
+              "city": "Aurora",
+              "distance": 18.51,
+              "storeType": "BigBox"
+            }
+          ],
+          "warnings": "Distances are in terms of miles (default)"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Jun 2016 17:52:48 GMT
+recorded_with: VCR 3.0.3
