@@ -2,7 +2,7 @@
 
 <% @stores.each do |store| %>
   <div class="store-info" id="store-<%= store.id %>">
-    <h5><%= store.name %></h5>
+    <h5><%= link_to store.name, store_path(id: store.id) %></h5>
     <p><%= store.city %></p>
     <p><%= store.distance %> miles</p>
     <p><%= store.phone %></p>
