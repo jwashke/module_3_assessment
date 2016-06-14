@@ -5,9 +5,7 @@ require "rails_helper"
 
 RSpec.describe "POST /api/v1/items" do
   it "returns the created item with its name, description, and image url" do
-    post "/api/v1/items", format: :json, item: {
-      name: "item name", description: "item description", image_url: "item image url"
-    }
+    post "/api/v1/items", format: :json, name: "item name", description: "item description", image_url: "item image url"
     parsed_json = JSON.parse(response.body)
 
     expect(response.status).to eq(201)

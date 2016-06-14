@@ -20,6 +20,6 @@ class Api::V1::ItemsController < Api::V1::ApiController
   end
 
   def item_params
-    params.require(:item).permit(:name, :description, :image_url)
+    params.permit(:name, :description, :image_url)
   end
 end
